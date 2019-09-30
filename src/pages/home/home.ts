@@ -6,9 +6,13 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+ toggle: boolean;
 
   constructor(public navCtrl: NavController) {
 
+  }
+  expandDiv(){
+    this.toggle = !this.toggle;
   }
 
 }
