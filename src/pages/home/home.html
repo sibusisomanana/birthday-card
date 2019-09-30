@@ -12,6 +12,28 @@
         </h2> -->
 
   </div>
+  <div class="box2">
+      <button ion-button full (click)="addmethod1()">Upload Image</button>
+      <img src="{{Picture}}" alt="" style="width:250px;  height: 250px;">
+
+    <ion-item>
+       <ion-input placeholder="Item Name" [(ngModel)]="item.name" round></ion-input>
+      </ion-item>
+      <ion-item>
+       <ion-input  placeholder="Item Price" [(ngModel)]="item.price"></ion-input>
+     
+    </ion-item>
+    <button (click)="incrementQ()"ion-button color="white"Font="20%" round>+</button>
+    <p style="color:white">{{item.quantity}}</p>
+    <button  (click)="decrementQ()"ion-button Font="20%" round>-</button>
+    <ion-item>
+
+      <button ion-button full (click)="addData()">Add</button>
+   </ion-item>
+   <ion-item>
+    <button ion-button full (click)="addmethod1()">close</button>
+ </ion-item>
+  </div>
 </div>
 </ion-content>
 
