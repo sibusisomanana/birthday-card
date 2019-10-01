@@ -15,15 +15,16 @@ export class HomePage {
   name:"",
   price:null,
   quantity:0,
-  
  }
   constructor(public navCtrl: NavController, private toastCtrl: ToastController) {
 
   }
+  totalPrice=0;
   expandDiv(){
     this.toggle = !this.toggle;
   }
 addData(){
+  // this.totalPrice=this.totalPrice + (price*quantity)
   this.database.collection("Item").doc().set(this.item).then(res => {
     this.toastCtrl.create({
       message: 'Item added',
